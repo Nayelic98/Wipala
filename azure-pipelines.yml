@@ -1,19 +1,27 @@
-# Starter pipeline
-# Start with a minimal pipeline that you can customize to build and deploy your code.
-# Add steps that build, run tests, deploy, and more:
-# https://aka.ms/yaml
+# Pipeline de demostración para mantenimiento imaginario - WIPALA
+trigger: none
 
-trigger:
-- main
-
-pool:
+pool: 
   vmImage: ubuntu-latest
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
+- script: echo "Iniciando mantenimiento de la plataforma WIPALA..."
+  displayName: "Inicio del mantenimiento"
 
 - script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+    echo "Simulando limpieza de logs..."
+    echo "Eliminando archivos temporales ficticios..."
+  displayName: "Limpieza de Sistema"
+
+- script: |
+    echo "Generando backup ficticio..."
+    echo "Backup_wipala_$(date +%F).zip creado"
+  displayName: "Backup"
+
+- script: |
+    echo "Verificando funcionamiento del sistema imaginario..."
+    echo "Todos los servicios están estables (simulación)"
+  displayName: "Verificación del sistema"
+
+- script: echo "Mantenimiento de WIPALA Completo."
+  displayName: "Fin del proceso"
